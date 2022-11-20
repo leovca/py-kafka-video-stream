@@ -7,7 +7,7 @@ topic = "topic1"
 server_url = "localhost:9092"
 
 def stream():
-    producer = KafkaProducer(bootstrap_servers=server_url)    
+    producer = KafkaProducer(bootstrap_servers=[server_url])    
     camera = cv2.VideoCapture(0)
     try:
         while(True):
